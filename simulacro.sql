@@ -15,3 +15,9 @@ ORDER BY replacement_cost DESC, title ASC;
 SELECT c.city as ciudad, b.country as pais from city c
 JOIN country b on  c.country_id = b.country_id
 order by pais;
+
+--Actividad 5 
+SELECT c.country, count(b.country_id) as NumCiudades FROM country c
+join city b on c.country_id = b.country_id
+GROUP by c.country_id, country
+ORDER BY NumCities DESC
