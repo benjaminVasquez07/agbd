@@ -21,3 +21,9 @@ SELECT c.country, count(b.country_id) as NumCiudades FROM country c
 join city b on c.country_id = b.country_id
 GROUP by c.country_id, country
 ORDER BY NumCities DESC
+
+--Actividad 6
+SELECT c.country, count(b.country_id) as numCiudades FROM country c
+JOIN city b on c.country_id = b.country_id
+GROUP BY c.country_id, country
+HAVING COUNT(b.country_id) > 2
