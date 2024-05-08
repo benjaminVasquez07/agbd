@@ -17,3 +17,8 @@ SELECT c.country_name as pais, r.region_name as region FROM countries c
 JOIN regions r on c.region_id = r.region_id
 ORDER BY  region, pais;
 
+-- Actividad 5
+SELECT e.first_name, e.last_name, d.department_name, e.salary from employees e
+JOIN departments d on e.department_id = d.department_id
+WHERE salary BETWEEN 9000 AND 17000
+order by salary DESC
