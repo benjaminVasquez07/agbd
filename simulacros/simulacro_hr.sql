@@ -22,3 +22,9 @@ SELECT e.first_name, e.last_name, d.department_name, e.salary from employees e
 JOIN departments d on e.department_id = d.department_id
 WHERE salary BETWEEN 9000 AND 17000
 order by salary DESC
+
+--Actividad 6
+SELECT r.region_name AS Region, COUNT(c.country_name) AS Cantidad_Paises FROM countries c
+JOIN regions r ON c.region_id = r.region_id
+GROUP BY r.region_name
+HAVING COUNT(c.country_name) > 5;
