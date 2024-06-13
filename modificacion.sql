@@ -26,3 +26,4 @@ VALUES ("AF", "Afghanistan", (SELECT region_id FROM regions WHERE region_name li
 INSERT INTO countries (country_id, country_name, region_id)
 VALUES ("DZ", "Argelia", (SELECT region_id FROM regions WHERE region_name like "Africa")),
 		("PS", "Palestina", (SELECT region_id FROM regions WHERE region_name like "Africa"))
+--
